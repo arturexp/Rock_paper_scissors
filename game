@@ -8,11 +8,12 @@ name = input("Enter your name:")
 print(f" Hello, {name}")
 user_rating = 0
 rating_file = open('rating.txt')
-rating_file = rating_file.readlines()
-line = [line for line in rating_file if name in line]
+rating_file1 = rating_file.readlines()
+line = [line for line in rating_file1 if name in line]
 name, user_rating = line[0].split()
 user_rating = int(user_rating)
 
+rating_file.close()
 
 while True:
     user_choice = input()
